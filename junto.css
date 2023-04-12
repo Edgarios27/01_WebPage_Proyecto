@@ -68,19 +68,23 @@
     background-color: #02c21f;
 }
 
-
 .singleicon img {
     width: 20px;
     height: 20px;
 }
 /*-----------akemi 2da----------*/
+
+.icon_close{
+    width: 25px;
+    height: 25px;
+}
 .container_icon {
     position: relative;
     display: flex;
     align-items: center;
     cursor: pointer;
  }
- .container_icon img {
+ .carrito-icon1 {
     background-color: #00a98f;
     border-radius: 100%;
     width: 40px;
@@ -92,8 +96,7 @@
     cursor: pointer;
  }
  
- 
- #cart-items-count{
+ .cart-items-count{
     font-size: 12px;
  }
  .count_products{
@@ -112,7 +115,18 @@
   .hidden-cart{
     display: none;
  }
- 
+ .cart-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+.empty_car{
+    position: relative;
+   margin-left: 150px;
+   margin-top: 10px;
+}
  
  .container-cart-products{
     position: absolute;
@@ -140,6 +154,7 @@
     display: flex;
     justify-content: space-between;
     flex: 0.8;
+    align-items: center;
  }
  .titulo-producto-carrito{
     font-size: 15px;
@@ -150,11 +165,28 @@
     font-size: 20px;
     margin-left: 10px;
  }
- 
+ .cart-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+.cart-total h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+.total-pagar{
+    font-size: 20px;
+    font-weight: 900;
+}
  
  /*Pendiente de estilo*/
- .imgen-carrito{
+ .imgen-carrito img{
     height: 5vh;
+    width: 25px;
+    height: 25px;
+    margin: 0;
  }
  
 /*-----------LUCIA----------*/

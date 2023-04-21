@@ -1,0 +1,49 @@
+[
+    {
+        "id" : 1,
+        "nombre" : "Old Watch",
+        "precio" : 50,
+        "img" : "https://th.bing.com/th/id/OIP.6Gv6Z2QdxYjTt_5P4ihwwQHaFZ?pid=ImgDet&rs=1",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 2,
+        "nombre" : "Sport Watch",
+        "precio" : 150,
+        "img" :  "https://images-na.ssl-images-amazon.com/images/I/71iNXoB0K-L._UL1500_.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 3,
+        "nombre" : "Duo Watch",
+        "precio" : 200,
+        "img" : "https://image.emperijoyada.com.mx/product/2020/6/12/1271292817297248256.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 4,
+        "nombre" : "Woman Watch",
+        "precio" : 250,
+        "img" : "/Proyecto/img/reloj-mujer.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 5,
+        "nombre" : "Men Watch",
+        "precio" : 300,
+        "img" : "/Proyecto/img/reloj-hombre.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 6,
+        "nombre" : "Kids Watch",
+        "precio" : 400,
+        "img" : "/Proyecto/img/reloj-boy.jpg",
+        "cantidad" : 1
+    }
+]

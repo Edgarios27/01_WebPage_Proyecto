@@ -72,36 +72,43 @@
     width: 20px;
     height: 20px;
 }
+
 /*-----------akemi 2da----------*/
 
-.icon_close{
+.icon_close {
     width: 25px;
     height: 25px;
 }
+
 .container_icon {
     position: relative;
     display: flex;
     align-items: center;
-    cursor: pointer;
- }
- .carrito-icon1 {
+
+}
+
+.carrito-icon1 {
     background-color: #00a98f;
     border-radius: 100%;
     width: 40px;
     height: 40px;
-    display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     padding: 10px;
     cursor: pointer;
- }
- 
- .cart-items-count{
+}
+
+.carrito-icon1:hover {
+    background-color: #02c21f;
+}
+
+.cart-items-count {
     font-size: 12px;
- }
- .count_products{
+}
+
+.count_products {
     position: absolute;
-    top:55%;
+    top: 55%;
     right: 0px;
     background-color: #000;
     color: white;
@@ -111,84 +118,92 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
- }
-  .hidden-cart{
+}
+
+.hidden-cart {
     display: none;
- }
- .cart-total{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-    gap: 20px;
 }
-.empty_car{
+
+.empty_car {
     position: relative;
-   margin-left: 150px;
-   margin-top: 10px;
+    text-align: center;
+    margin-top: 10px;
 }
- 
- .container-cart-products{
+
+.container-cart-products {
     position: absolute;
     top: 50px;
     right: 0px;
     background-color: #00a98f;
-    width: 400px;
+    width: 500px;
     z-index: 1;
-    min-height: 40vh;
+    min-height: 50vh;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
- }
- .cantidad-producto-carrito{
+}
+
+.cantidad-producto-carrito {
     font-weight: 400;
     font-size: 25px;
- }
- .cart-product{
+}
+
+.cart-product {
     display: flex;
     padding: 30px;
     justify-content: space-between;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     align-items: center;
- }
- .info-cart-product{
+}
+
+.info-cart-product {
     display: flex;
     justify-content: space-between;
     flex: 0.8;
     align-items: center;
- }
- .titulo-producto-carrito{
+}
+
+.titulo-producto-carrito {
     font-size: 15px;
-    justify-content:center;
- }
- .precio-producto-carrito{
+    justify-content: center;
+}
+
+.precio-producto-carrito {
     font-weight: 700;
     font-size: 20px;
     margin-left: 10px;
- }
- .cart-total{
+}
+
+.cart-total {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
     gap: 20px;
 }
-.cart-total h3{
+
+.cart-total h3 {
     font-size: 20px;
     font-weight: 700;
 }
-.total-pagar{
+
+.total-pagar {
     font-size: 20px;
     font-weight: 900;
 }
- 
- /*Pendiente de estilo*/
- .imgen-carrito img{
-    height: 5vh;
-    width: 25px;
-    height: 25px;
+
+.sumar,
+.restar,
+.icon_close {
+    cursor: pointer;
+}
+
+/*Pendiente de estilo*/
+.imgen-carrito img {
+    width: 50px;
+    height: 50px;
     margin: 0;
- }
- 
+}
+
 /*-----------LUCIA----------*/
 .caja2 {
     background-color: #333E48;
@@ -450,14 +465,16 @@ h4 {
 }
 
 /*VILLA*/
-.menu_nav a{
+.menu_nav a {
     color: rgb(45, 47, 48);
     text-decoration: none;
 }
-.home{
+
+.home {
     display: none;
 }
-.menu_nav{
+
+.menu_nav {
     display: block;
     position: absolute;
     top: 0px;
@@ -472,42 +489,52 @@ h4 {
     font-size: 50px;
     font-weight: 900;
 }
-.menu_nav ul{
+
+.menu_nav ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
 }
-.menu_nav li{
+
+.menu_nav li {
     list-style: none;
 }
 
-.menu_hidden{
+.menu_hidden {
     display: none;
 }
-.menu_nav img{
+
+.menu_nav img {
     width: 50px;
 }
-.simbolo_hamburguesa{
+
+.simbolo_hamburguesa {
     margin-left: 0%;
 }
-.simbolo_hamburguesa img{
+
+.simbolo_hamburguesa img {
     width: 50px;
 }
-.cerrar{
+
+.cerrar {
     background-color: transparent;
 }
-.abrir{
+
+.abrir {
     background-color: transparent;
 }
+
 @media (min-width:900px) {
-    .simbolo_hamburguesa{
+    .simbolo_hamburguesa {
         display: none;
     }
-    .home{
+
+    .home {
         display: inline-flex;
     }
-    .menu_nav{
+
+    .menu_nav {
         justify-content: flex-start;
     }
- }
+}

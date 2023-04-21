@@ -14,19 +14,50 @@ menuCerrar.addEventListener('click', function () {
 });
 //COMIENZO CARRITO
 //PARA DESPLEGAR EL CARRITO
-const btnCart = document.querySelector('.container_icon');//linea 51
+const btnCart = document.querySelector('.holiwis');//linea 51
 const containerCartProducts = document.querySelector('.container-cart-products');
-btnCart.addEventListener('click', () => {
 
-    containerCartProducts.classList.toggle('hidden-cart');//linea
+btnCart.addEventListener('click', () => {
+    containerCartProducts.classList.toggle('hidden-cart');
 });
-//
+
 const cartInfo = document.querySelector('.cart-product');
 const rowProduct = document.querySelector('.row-product');
 const productsList = document.querySelector('.container_productos');
 const empty_car = document.querySelector('.empty_car');
+
+const shopContent = document.querySelector('.container_productos')
+
+const getProducts = async () => {
+    const response = await fetch("data.json");
+    const data =  await response.json();
+    console.log(data)
+
+    data.forEach((product) => {
+        let content = document.createElement("div");
+        content.className = "producto";
+        content.innerHTML = `
+        <figure>
+            <a href="detalleWomen.html">
+                <img src="${product.img}" alt="" srcset="">
+            </a>
+        </figure>
+        <div class="info_product">
+            <h2>${product.nombre}</h2>
+            <p class="price">€ ${product.precio}</p>
+            <button class="btn_add_cart">Agregar al Carrito</button>
+        </div>
+        `;
+        shopContent.append(content);
+
+    });
+    
+}
+
+getProducts();
+
 let allProducts = []
-const valorTotal = document.querySelector('.total-pagar');
+
 const countProducts = document.querySelector('.cart-items-count');
 productsList.addEventListener('click', e => {
     if (e.target.classList.contains('btn_add_cart')) {
@@ -49,7 +80,7 @@ productsList.addEventListener('click', e => {
             const products = allProducts.map(product => {
                 if (product.title === infoProduct.title) {
                     product.quantity++;
-                    product.imagen++;
+                    product.imagen;
                     return product;
                 } else {
                     return product;
@@ -108,9 +139,9 @@ const showHTML = () => {
     //esta vacio por eso comprobamos que no hay ningun articulo en el carrito
 
     if (allProducts.length == 0) {
-        empty_car.style.display = 'block';
+        empty_car.style.display = "block";
     } else {
-        empty_car.style.display = 'none';
+        empty_car.style.display = "none";
     }
 
     //colocamos texto si no tenemos nada en el carrito
@@ -137,18 +168,35 @@ const showHTML = () => {
 
         productoCreado.innerHTML =
             `<div class="info-cart-product">
-                <span class="cantidad-producto-carrito"> ${product.quantity}</span>
+                <span class="restar">➖</span>
+                <span class="   -producto-carrito"> ${product.quantity}</span>
+                <span class="sumar">➕</span>
                 <p class="titulo-producto-carrito">${product.title}</p>
                 <span class="precio-producto-carrito">${product.price}</span>
-                <span class="imgen-carrito"><img src="${product.imagen}"</span>
+                <span class="imgen-carrito"><img src="${product.imagen}"></span>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon_close">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-             </svg>`
+            <span class="icon_close">❌</span>
+              `
 
         //añadimos al html nuestro innerHtml con el metodo append
         //para añadirlo usamos rowproduct(que es el contenedor de productos previamente creado
         // en el html  y almacenado en el js )
+
+        let restar = productoCreado.querySelector(".restar");
+        restar.addEventListener("click", () => {
+            if (product.quantity !== 1) {
+                product.quantity--;
+            }
+            console.log(restar)
+            showHTML()
+
+        });
+        let sumar = productoCreado.querySelector(".sumar");
+        sumar.addEventListener("click", () => {
+            product.quantity++;
+            console.log(sumar)
+            showHTML()
+        });
 
 
         rowProduct.append(productoCreado);
@@ -161,11 +209,12 @@ const showHTML = () => {
     })
     //modificamos el valor del total a pagar con la suma del coste total de los
     //añadidos al carrito  y el numero total de articulos
-
-    valorTotal.innerText = `$${total}`;
+    const valorTotal = document.querySelector('.total-pagar');
+    valorTotal.innerText = `€ ${total}`;
     countProducts.innerText = totalOfProducts;
 
 };
 
 //llamamos para que nos ordene la primera vez que entramos en la web el carrito
 showHTML();
+// sasaass///

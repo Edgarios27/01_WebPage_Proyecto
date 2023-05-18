@@ -27,7 +27,7 @@
         "id" : 4,
         "nombre" : "Woman Watch",
         "precio" : 250,
-        "img" : "/01_WebPage_Proyecto/img/reloj-mujer.jpg",
+        "img" : "./img/reloj-mujer.jpg",
         "cantidad" : 1
     },
     
@@ -35,7 +35,7 @@
         "id" : 5,
         "nombre" : "Men Watch",
         "precio" : 300,
-        "img" : "/01_WebPage_Proyecto/img/reloj-hombre.jpg",
+        "img" : "./img/reloj-hombre.jpg",
         "cantidad" : 1
     },
     
@@ -43,7 +43,7 @@
         "id" : 6,
         "nombre" : "Kids Watch",
         "precio" : 400,
-        "img" : "/01_WebPage_Proyecto/img/reloj-boy.jpg",
+        "img" : "./img/reloj-boy.jpg",
         "cantidad" : 1
     }
 ]
